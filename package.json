@@ -19,7 +19,7 @@
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
     "prebuild": "rimraf dist",
-    "build": "webpack --progress"
+    "build": "webpack --mode production"
   },
   "eslintConfig": {
     "extends": [
