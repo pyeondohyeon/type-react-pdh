@@ -1,0 +1,48 @@
+@import "mixin";
+@import "color";
+
+* {
+  padding: 0px;
+  margin: 0px;
+
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+
+  border-collapse: collapse;
+  text-decoration: none;
+  list-style: none;
+
+  box-sizing: border-box;
+}
+html {
+  color: var(--basic-font);
+  font-size: 1.2rem;
+  font-family: "sans-serif";
+  background-color: var(--basic-back);
+}
+header, footer, main, section, article {
+  display: block;
+}
+header {
+  @include flex-set("", center);
+
+  height: 70px;
+  padding: 0px 10px;
+
+  border-bottom: 1px solid var(--green);
+}
+nav {
+  li {
+    @include flex-set(center, center);
+    min-width: 90px;
+    font-size: 14px;
+  }
+  a {
+    transition-duration: .2s;
+
+    &:hover {
+      color: var(--green);
+    }
+  }
+}

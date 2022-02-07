@@ -1,0 +1,34 @@
+:root {
+  --basic-back: #1E232D;
+  --basic-font: #F1F1F1;
+
+  --bg-0: #1e2026;
+  --bg-1: #2A2D35;
+
+  --input-bg: #EDEEF2;
+
+  @for $i from 1 through 9 {
+    --font-op#{$i}: #FFFFFF#{$i}0;
+  }
+  --font-white: #FFFFFF;
+
+  --font-up: #0ECB81;
+  --font-down: #F6465D;
+
+  --font-span: #A2A2A2;
+
+  --red: #F6465D;
+  --green: #0ECB81;
+  --yellow: #FCD535;
+  --blue: #009CBC;
+  --violet: #D500C0;
+  --greyblue: #7B94C1;
+  --white: #FFFFFF;
+  --disabled: #AEAEAE;
+
+  --tab-select: #3C5581;
+}
+
+@for $i from 1 through 9 {
+  .font-op#{$i} { color: var(--font-op#{$i}) }
+}

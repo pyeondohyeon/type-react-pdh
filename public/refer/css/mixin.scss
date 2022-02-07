@@ -1,0 +1,13 @@
+@mixin flex-set($contents: "", $items: ""){
+  display: flex;
+  display: -ms-flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+
+  @if($contents){
+    justify-content: $contents;
+  }
+  @if($items){
+    align-items: $items;
+  }
+}

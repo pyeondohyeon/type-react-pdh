@@ -1,27 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import { Notice, Main, Games } from './views/index'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <p>이 앱은 타입스크립트로 작성된 리액트 앱 입니다.</p>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+        <Routes>
+            <Route path="/" element={<Main/>} />
+            <Route path="/Notice" element={<Notice/>} />
+            <Route path="/Games" element={<Games/>} />
+        </Routes>
+    );
+  }
 }
 
 export default App;
