@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
 import App from './App';
-import '../public/favicon.ico'
+import '../public/favicon.ico';
+import '/src/refer/css/css.css'
 import PublicHeader from "./component/header/header.nav";
 
 function Root() {

@@ -11,8 +11,7 @@ module.exports = {
     // bnudle 파일을 /dist/ 폴더에 생성
     output: {
         path: path.resolve(__dirname, 'dist/'),
-        publicPath: '/dist/',
-        filename: 'build.js'
+        publicPath: '/'
     },
     // 서버 사이드
     devServer: {
