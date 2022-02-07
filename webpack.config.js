@@ -11,7 +11,8 @@ module.exports = {
     // bnudle 파일을 /dist/ 폴더에 생성
     output: {
         path: path.resolve(__dirname, 'dist/'),
-        publicPath: '/',
+        publicPath: '/dist/',
+        filename: 'build.js'
     },
     // 서버 사이드
     devServer: {
@@ -24,7 +25,7 @@ module.exports = {
         extensions: ['.tsx', '.ts', '.js', 'jsx']
     },
     module: {
-        // 바벨 규칙 test: 확장자[정규식]를 use 모듈로 빌드 
+        // 바벨 규칙 test: 확장자[정규식]를 use 모듈로 빌드
         rules: [
             {
                 // 해당 확장자를 babel로 빌드
