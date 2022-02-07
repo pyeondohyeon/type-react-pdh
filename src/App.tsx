@@ -18,6 +18,7 @@ function App() {
         >
           Learn React
         </a>
+        <p>이 앱은 타입스크립트로 작성된 리액트 앱 입니다.</p>
       </header>
     </div>
   );
