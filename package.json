@@ -21,6 +21,7 @@
     "prebuild": "rimraf dist",
     "build": "webpack --progress --mode production"
   },
+  "os": ["darwin", "linux", "win32"],
   "eslintConfig": {
     "extends": [
       "react-app",
