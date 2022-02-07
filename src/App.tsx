@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { Notice, Main, Games } from './views/index'
-
+// 왜 빌드 안돼 씨발
 class App extends Component {
   render() {
     return (
