@@ -46,3 +46,39 @@ nav {
     }
   }
 }
+$color-sheet: (
+        red: #F6465D,
+        green: #0ECB81,
+        yellow: #FCD535,
+        blue: #009CBC,
+        violet: #D500C0,
+        greyblue: #7B94C1,
+        white: #FFFFFF,
+);
+.btn {
+  margin: 5px;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: bold;
+
+  @each $color, $code in $color-sheet {
+    &.btn-#{$color} {
+      @include btn-set($code);
+
+      &:hover {
+        @include btn-hover($code)
+      }
+    }
+    &.btn-outline-#{$color} {
+      @include btn-set-outline($code);
+
+      &:hover {
+        @include btn-hover-outline($code)
+      }
+    }
+  }
+}
+
+progress {
+  transition-duration: .3s;
+}

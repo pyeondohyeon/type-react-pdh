@@ -32,3 +32,16 @@
 @for $i from 1 through 9 {
   .font-op#{$i} { color: var(--font-op#{$i}) }
 }
+
+$color-sheet: (
+    red: #F6465D,
+    green: #0ECB81,
+    yellow: #FCD535,
+    blue: #009CBC,
+    violet: #D500C0,
+    greyblue: #7B94C1,
+    white: #FFFFFF,
+);
+@each $color, $code in $color-sheet {
+  .font-#{$color} { color: #{$code} !important }
+}

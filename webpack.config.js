@@ -28,13 +28,14 @@ module.exports = {
         rules: [
             {
                 // 해당 확장자를 babel로 빌드
-                test: /\.(js|jsx|tsx|ts)$/,
+                test: /\.(js|ts)x?$/,
                 use: ['babel-loader'],
                 exclude: /node_modules/,
             },
             {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"]
+                test: /\.(css|scss)$/,
+                use: ["style-loader", "css-loader", "sass-loader"],
+                exclude: /node_modules/,
             },
             {
                 test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
@@ -51,6 +52,6 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './public/index.html',
             filename: 'index.html',
-        }),
+        })
     ],
 };

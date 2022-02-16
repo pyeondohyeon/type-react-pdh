@@ -11,3 +11,59 @@
     align-items: $items;
   }
 }
+@mixin inflex-set($contents: "", $items: ""){
+  display: inline-flex;
+  display: -ms-inline-flexbox;
+  display: -webkit-inline-flex;
+
+  @if($contents){
+    justify-content: $contents;
+  }
+  @if($items){
+    align-items: $items;
+  }
+}
+
+$color-sheet: (
+        red: #F6465D,
+        green: #0ECB81,
+        yellow: #FCD535,
+        blue: #009CBC,
+        violet: #D500C0,
+        greyblue: #7B94C1,
+        white: #FFFFFF,
+);
+@each $color, $code in $color-sheet {
+  .font-#{$color} { color: #{$code} !important }
+}
+@mixin btn-preset{
+  @include inflex-set(center, center);
+  box-shadow: 1px 1px 0px #0008;
+  border-radius: 4px;
+  transition-duration: .3s;
+  cursor: pointer;
+}
+@mixin btn-set($color: null){
+  @include btn-preset;
+  @if($color){
+    color: $color;
+    border: 1px solid $color;
+  }
+}
+@mixin btn-hover($color: null){
+  color: var(--basic-back);
+  background-color: $color;
+}
+
+@mixin btn-set-outline($color: null){
+  @include btn-preset;
+  @if($color){
+    color: var(--basic-back);
+    border: 1px solid $color;
+    background-color: $color;
+  }
+}
+@mixin btn-hover-outline($color: null){
+  color: $color;
+  background-color: var(--basic-back);
+}
